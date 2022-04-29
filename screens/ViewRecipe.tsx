@@ -39,12 +39,12 @@ export default function ViewRecipe({ navigation, route }: any) {
           </TouchableOpacity>
           <View style={styles.row}>
             <Button
-              title={"Edit"}
+              title={"E D I T"}
               buttonStyle={styles.but}
               titleStyle={styles.buttontitleContainer}
               onPress={() => navigation.navigate("Edit", { recipe: route.params.recipe })}
             />
-            <Button title={"Delete"} buttonStyle={styles.but} titleStyle={styles.buttontitleContainer} onPress={handleDelete} />
+            <Button title={"D E L E T E"} buttonStyle={styles.but} titleStyle={styles.buttontitleContainer} onPress={handleDelete} />
           </View>
         </View>
       </ScrollView>
@@ -55,6 +55,7 @@ export default function ViewRecipe({ navigation, route }: any) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#62BBCF",
   },
   header: {
     padding: 10,
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     fontFamily: "poppins-bold",
-    backgroundColor: "#2979ff",
+    backgroundColor: "#32708F",
   },
   headerTitle: {
     fontSize: 16,
@@ -83,11 +84,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginTop: 5,
     marginBottom: 10,
+    color: "#023e8a",
   },
   title: {
-    fontSize: 20,
+    fontSize: 23,
     fontWeight: "bold",
     fontFamily: "poppins-bold",
+    color: "#023e8a",
   },
   box: {
     height: 300,
@@ -102,7 +105,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#5393ff",
+    backgroundColor: "#32708F",
   },
   buttonText: {
     fontSize: 20,
@@ -121,10 +124,11 @@ const styles = StyleSheet.create({
     width: 150,
     padding: 10,
     borderRadius: 5,
-    backgroundColor: "#2979ff",
+    backgroundColor: "#32708F",
   },
   buttontitleContainer: {
     color: "#ffff",
     fontFamily: "poppins-bold",
+    fontWeight: "bold",
   },
 });

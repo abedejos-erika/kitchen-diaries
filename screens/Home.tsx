@@ -44,7 +44,12 @@ export default function Home({ navigation }: any) {
 
   return (
     <View style={styles.container}>
-      <Header navigation={navigation} />
+      <Header navigation={navigation}/>
+      <View style={styles.introContainer}>
+        <Text style={styles.introtextContainer}>
+        My Recipes.
+        </Text>
+      </View>
       <FlatList
         data={recipes}
         numColumns={2}
@@ -59,6 +64,7 @@ export default function Home({ navigation }: any) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#62BBCF",
   },
   row: {
     flexDirection: "row",
@@ -67,7 +73,7 @@ const styles = StyleSheet.create({
     padding: 10,
     paddingTop: 50,
     flexDirection: "row",
-    backgroundColor: "#2979ff",
+    backgroundColor: "#32708F",
     fontFamily: "poppins-bold",
     justifyContent: "space-between",
   },
@@ -85,7 +91,7 @@ const styles = StyleSheet.create({
     elevation: 3,
     borderRadius: 5,
     overflow: "hidden",
-    backgroundColor: "#fff",
+    backgroundColor: "#32708F",
   },
   detail: {
     padding: 5,
@@ -96,13 +102,30 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 16,
+    fontWeight: "bold",
+    color: "white",
   },
   desc: {
     marginTop: 5,
     fontSize: 13,
+    color: "white",
   },
   image: {
     height: 100,
     width: "100%",
+  },
+  introContainer: {
+    flex: 0, 
+    borderWidth: 0, 
+    alignItems: "center",
+    paddingTop: 20,
+    paddingBottom: 10,
+    backgroundColor: "#62BBCF"
+  },
+  introtextContainer: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    paddingVertical: 0,
+    color: "#32708F"
   },
 });

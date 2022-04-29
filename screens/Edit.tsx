@@ -161,12 +161,12 @@ export default function Edit({ navigation, route }: any) {
                 {!!image && <Image source={{ uri: image }} style={styles.img} />}
                 <View style={styles.buttonContainer}>
                   <Button
-                    title="Save Changes"
+                    title="S A V E   C H A N G E S"
                     loading={load}
                     disabled={load}
                     onPress={() => handleSubmit()}
                     buttonStyle={styles.buttonstyleContainer}
-                    titleStyle={{ color: "#ffff", fontFamily: "poppins-bold" }}
+                    titleStyle={{ color: "#ffff", fontFamily: "poppins-bold", fontWeight: "bold", }}
                   />
                 </View>
               </Fragment>
@@ -184,26 +184,27 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
   },
   titleContainer: {
     padding: 10,
     paddingTop: 50,
     flexDirection: "row",
     fontFamily: "poppins-bold",
-    backgroundColor: "#2979ff",
+    backgroundColor: "#32708F",
   },
   titletextContainer: {
     fontSize: 18,
     color: "white",
     marginLeft: 10,
     fontFamily: "poppins-bold",
+    fontWeight: "bold",
   },
   textboxContainer: {
     flex: 0,
     paddingHorizontal: 10,
     justifyContent: "center",
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
   },
   textvalidationContainer: {
     color: "red",
@@ -214,11 +215,12 @@ const styles = StyleSheet.create({
     marginTop: 20,
     alignItems: "center",
     flexDirection: "row",
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
     justifyContent: "center",
+    paddingBottom: 30,
   },
   buttonstyleContainer: {
-    backgroundColor: "#2979ff",
+    backgroundColor: "#32708F",
     borderRadius: 5,
     width: "100%",
     padding: 10,
@@ -226,7 +228,7 @@ const styles = StyleSheet.create({
   footerRow: {
     alignItems: "center",
     flexDirection: "row",
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
     justifyContent: "space-between",
   },
   footerText: {
@@ -250,7 +252,7 @@ const styles = StyleSheet.create({
   ScrollViewContainer: {
     marginHorizontal: 0,
     flexGrow: 1,
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
   },
   img: {
     height: 200,
@@ -267,7 +269,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#5393ff",
+    backgroundColor: "#32708F",
   },
   buttonText: {
     fontSize: 16,

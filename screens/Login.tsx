@@ -33,15 +33,24 @@ export default function Login({ navigation }: any) {
         style={{
           width: "100%",
           height: "100%",
-          backgroundColor: "white",
+          backgroundColor: "#62BBCF",
         }}
       >
         <View style={styles.titleContainer}>
-          <Text style={styles.titletextContainer}>Login</Text>
+          <Text style={styles.titletextContainer}>Sign In  |  Kitchen Diaries</Text>
         </View>
 
         <View style={styles.lottieContainer}>
-          <LottieView source={require("../assets/lottie/83255-connect.json")} autoPlay={true} loop={true} />
+          <LottieView source={require("../assets/lottie/24462-happy-toast.json")} autoPlay={true} loop={true} />
+        </View>
+
+        <View style={styles.introContainer}>
+          <Text style={styles.introtextContainer}>
+          Sign In.
+          </Text>
+          <Text style={styles.introsubContainer}>
+          or create an account in Kitchen Diaries.
+          </Text>
         </View>
 
         <View style={styles.textboxContainer}>
@@ -50,7 +59,7 @@ export default function Login({ navigation }: any) {
             mode={"outlined"}
             value={email}
             autoComplete={false}
-            right={<TextInput.Icon name="email" color={"#2979ff"} />}
+            right={<TextInput.Icon name="email" color={"#32708F"} />}
             style={{ marginBottom: 1 }}
             onChangeText={(text: string) => {
               setEmail(text);
@@ -62,7 +71,7 @@ export default function Login({ navigation }: any) {
             value={password}
             autoComplete={false}
             secureTextEntry={!visible}
-            right={<TextInput.Icon name={visible ? "eye" : "eye-off"} onPress={() => setVisible(!visible)} color={"#2979ff"} />}
+            right={<TextInput.Icon name={visible ? "eye" : "eye-off"} onPress={() => setVisible(!visible)} color={"#32708F"} />}
             onChangeText={(text: string) => setPassword(text)}
           />
           <View style={styles.forgotpwContainer}>
@@ -70,20 +79,22 @@ export default function Login({ navigation }: any) {
               Forgot Password?
             </Text>
             <Text style={styles.forgotpwtextContainer} onPress={() => navigation.navigate("Signup")}>
-              Register?
+              Sign Up?
             </Text>
           </View>
         </View>
 
         <Button
           loading={load}
-          title={"Log In"}
+          title={"S I G N   I N"}
           buttonStyle={{
             padding: 7,
             marginTop: 30,
             borderRadius: 5,
             marginHorizontal: 20,
-            backgroundColor: "#2979ff",
+            backgroundColor: "#32708F",
+            width: "60%",
+            marginLeft: 70,
           }}
           onPress={loginHandler}
           titleStyle={styles.buttontitleContainer}
@@ -97,18 +108,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
     justifyContent: "center",
   },
   lottieContainer: {
     flex: 0.4,
     marginTop: 50,
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
   },
   titleContainer: {
     paddingTop: 50,
     paddingBottom: 10,
-    backgroundColor: "#2979ff",
+    backgroundColor: "#32708F",
   },
   titletextContainer: {
     fontSize: 18,
@@ -127,26 +138,46 @@ const styles = StyleSheet.create({
   textboxContainer: {
     flex: 0,
     paddingHorizontal: 20,
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
     justifyContent: "center",
   },
   buttontitleContainer: {
     color: "#ffff",
     fontFamily: "poppins-bold",
+    fontWeight: "bold",
   },
   forgotpwContainer: {
     width: "100%",
     marginTop: 10,
     alignItems: "center",
     flexDirection: "row",
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
     justifyContent: "space-between",
   },
   forgotpwtextContainer: {
     fontSize: 15,
-    color: "skyblue",
+    color: "#32708F",
     fontWeight: "bold",
     paddingVertical: 0,
     textDecorationLine: "underline",
+  },
+  introContainer: {
+    flex: 0.2, 
+    borderWidth: 0, 
+    marginLeft: 25, 
+    backgroundColor: "#62BBCF"
+  },
+  introtextContainer: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    paddingVertical: 0,
+    color: "#023e8a"
+  },
+  introsubContainer: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    paddingVertical: 10,
+    color: '#32708F',
+    fontFamily: 'poppins-bold',
   },
 });

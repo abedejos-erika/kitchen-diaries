@@ -89,6 +89,12 @@ export default function Signup({ navigation }: any) {
           >
             {({ handleChange, handleSubmit, values, errors }) => (
               <Fragment>
+
+                <View style={styles.introContainer}>
+                  <Text style={styles.introtextContainer}>
+                  Sign Up.
+                  </Text>
+                </View>
                 <View style={styles.textboxContainer}>
                   <TextInput
                     label="Full Name"
@@ -109,7 +115,7 @@ export default function Signup({ navigation }: any) {
                       backgroundColor: "white",
                     }}
                   >
-                    <View style={{ width: "100%", backgroundColor: "white" }}>
+                    <View style={{ width: "100%", backgroundColor: "#62BBCF" }}>
                       <TextInput
                         value={values.birthday}
                         mode={"outlined"}
@@ -122,7 +128,7 @@ export default function Signup({ navigation }: any) {
                       {errors.birthday && <Text style={styles.textvalidationContainer}>{errors.birthday}</Text>}
                     </View>
                     <TouchableOpacity onPress={() => setVisible(true)} style={{ position: "absolute", right: 8, top: 20 }}>
-                      <Ionicons name="calendar" size={30} color="#2979ff" />
+                      <Ionicons name="calendar" size={30} color="#32708F" />
                     </TouchableOpacity>
                   </View>
                   <DateTimePickerModal
@@ -168,7 +174,7 @@ export default function Signup({ navigation }: any) {
                     value={values.email}
                     autoComplete={false}
                     style={{ marginBottom: 5 }}
-                    right={<TextInput.Icon name="email" color={"#2979ff"} />}
+                    right={<TextInput.Icon name="email" color={"#32708F"} />}
                     onChangeText={handleChange("email")}
                     error={errors.email ? true : false}
                   />
@@ -181,7 +187,7 @@ export default function Signup({ navigation }: any) {
                     style={{ marginBottom: 5 }}
                     onChangeText={handleChange("password")}
                     error={errors.password ? true : false}
-                    right={<TextInput.Icon name={visible ? "eye" : "eye-off"} onPress={() => setHide(!hide)} color={"#2979ff"} />}
+                    right={<TextInput.Icon name={visible ? "eye" : "eye-off"} onPress={() => setHide(!hide)} color={"#32708F"} />}
                     secureTextEntry={!hide}
                   />
                   {errors.password && <Text style={styles.textvalidationContainer}>{errors.password}</Text>}
@@ -189,16 +195,16 @@ export default function Signup({ navigation }: any) {
 
                 <View style={styles.box}>
                   <Text style={styles.boxText} onPress={() => navigation.navigate("Login")}>
-                    Already have an account? Login
+                    Already have an account? Sign In.
                   </Text>
                 </View>
 
                 <View style={styles.buttonContainer}>
                   <Button
-                    title="Register"
+                    title="S I G N   U P"
                     onPress={() => handleSubmit()}
                     buttonStyle={styles.buttonstyleContainer}
-                    titleStyle={{ color: "#ffff", fontFamily: "poppins-bold" }}
+                    titleStyle={{ color: "#ffff", fontFamily: "poppins-bold", fontWeight: "bold" }}
                   />
                 </View>
               </Fragment>
@@ -221,7 +227,7 @@ const styles = StyleSheet.create({
   titleContainer: {
     paddingTop: 50,
     paddingBottom: 10,
-    backgroundColor: "#2979ff",
+    backgroundColor: "#32708F",
     fontFamily: "poppins-bold",
   },
   titletextContainer: {
@@ -229,12 +235,13 @@ const styles = StyleSheet.create({
     color: "white",
     marginLeft: 10,
     fontFamily: "poppins-bold",
+    fontWeight: "bold",
   },
   textboxContainer: {
     flex: 0,
     paddingHorizontal: 10,
     justifyContent: "center",
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
   },
   textvalidationContainer: {
     color: "red",
@@ -244,11 +251,12 @@ const styles = StyleSheet.create({
     width: "100%",
     alignItems: "center",
     flexDirection: "row",
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
     justifyContent: "center",
+    paddingBottom: 220,
   },
   buttonstyleContainer: {
-    backgroundColor: "#2979ff",
+    backgroundColor: "#32708F",
     borderRadius: 5,
     width: "100%",
     padding: 10,
@@ -256,7 +264,7 @@ const styles = StyleSheet.create({
   footerRow: {
     alignItems: "center",
     flexDirection: "row",
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
     justifyContent: "space-between",
   },
   footerText: {
@@ -267,12 +275,12 @@ const styles = StyleSheet.create({
     paddingBottom: 15,
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
   },
   boxText: {
     fontSize: 15,
     marginLeft: 15,
-    color: "skyblue",
+    color: "#32708F",
     fontWeight: "bold",
     fontFamily: "poppins-bold",
     textDecorationLine: "underline",
@@ -280,6 +288,19 @@ const styles = StyleSheet.create({
   ScrollViewContainer: {
     marginHorizontal: 0,
     flexGrow: 1,
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
+  },
+  introContainer: {
+    flex: 0.2, 
+    borderWidth: 0, 
+    alignItems: "center",
+    paddingTop: 30,
+    backgroundColor: "#62BBCF"
+  },
+  introtextContainer: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    paddingVertical: 0,
+    color: "#023e8a"
   },
 });
