@@ -128,4 +128,12 @@ const styles = StyleSheet.create({
     paddingVertical: 0,
     color: "#32708F"
   },
+  headerContent: {
+    padding: 10,
+    paddingTop: 50,
+    flexDirection: "row",
+    backgroundColor: "#32708F",
+    fontFamily: "poppins-bold",
+    justifyContent: "space-between",
+  },
 });

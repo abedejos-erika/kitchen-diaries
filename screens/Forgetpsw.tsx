@@ -3,6 +3,7 @@ import { Button } from "react-native-elements";
 import { TextInput } from "react-native-paper";
 import { StyleSheet, Text, View } from "react-native";
 import { auth, sendPasswordResetEmail } from "../firebase";
+import LottieView from "lottie-react-native";
 
 export default function Login({ navigation }: any) {
   const [email, setEmail] = useState<string>("");
@@ -23,6 +24,10 @@ export default function Login({ navigation }: any) {
           <Text style={styles.titletextContainer}>Reset Password</Text>
         </View>
 
+        <View style={styles.lottieContainer}>
+          <LottieView source={require("../assets/lottie/97471-sent-email.json")} autoPlay={true} loop={true} />
+        </View>
+
         <View style={styles.introContainer}>
           <Text style={styles.introtextContainer}>
           Reset Password.
@@ -41,10 +46,10 @@ export default function Login({ navigation }: any) {
           />
           <View style={styles.forgotpwContainer}>
             <Text style={styles.forgotpwtextContainer} onPress={() => navigation.navigate("Login")}>
-              Login
+              Sign In
             </Text>
             <Text style={styles.forgotpwtextContainer} onPress={() => navigation.navigate("Signup")}>
-              Register
+              Sign Up
             </Text>
           </View>
 
@@ -77,7 +82,7 @@ const styles = StyleSheet.create({
   lottieContainer: {
     flex: 0.4,
     marginTop: 50,
-    backgroundColor: "white",
+    backgroundColor: "#62BBCF",
   },
   titleContainer: {
     paddingTop: 50,
@@ -119,7 +124,7 @@ const styles = StyleSheet.create({
   },
   forgotpwtextContainer: {
     fontSize: 15,
-    color: "#32708F",
+    color: "#1d3557",
     fontWeight: "bold",
     paddingVertical: 0,
     textDecorationLine: "underline",
@@ -135,6 +140,6 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: 'bold',
     paddingVertical: 0,
-    color: "#023e8a"
+    color: "#1d3557"
   },
 });

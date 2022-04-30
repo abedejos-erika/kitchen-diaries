@@ -8,6 +8,7 @@ import { FontAwesome, Entypo, Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { StyleSheet, ScrollView, Text, View, Image, TouchableOpacity } from "react-native";
 import { db, storage, ref, collection, addDoc, getDownloadURL, uploadBytesResumable } from "../firebase";
+import LottieView from "lottie-react-native";
 
 export default function Recipe({ navigation }: any) {
   const [image, setImage] = React.useState<string>("");
@@ -112,7 +113,6 @@ export default function Recipe({ navigation }: any) {
             <Ionicons name="arrow-back" onPress={() => navigation.goBack()} size={24} color="white" />
             <Text style={styles.titletextContainer}>Add New Recipe</Text>
           </View>
-
           <Formik initialValues={{ desc: "", link: "", title: "", img: "" }} onSubmit={submit} validationSchema={recipeFormSchema}>
             {({ handleChange, handleSubmit, values, errors }) => (
               <Fragment>
@@ -288,5 +288,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     justifyContent: "space-between",
+  },
+  lottieContainer: {
+    flex: 0.4,
+    marginTop: 50,
+    backgroundColor: "#62BBCF",
   },
 });

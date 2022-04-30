@@ -84,13 +84,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginTop: 5,
     marginBottom: 10,
-    color: "#023e8a",
+    color: "#1d3557",
   },
   title: {
     fontSize: 23,
     fontWeight: "bold",
     fontFamily: "poppins-bold",
-    color: "#023e8a",
+    color: "#1d3557",
   },
   box: {
     height: 300,

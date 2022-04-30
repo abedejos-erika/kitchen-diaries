@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
   },
   forgotpwtextContainer: {
     fontSize: 15,
-    color: "#32708F",
+    color: "#1d3557",
     fontWeight: "bold",
     paddingVertical: 0,
     textDecorationLine: "underline",
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: 'bold',
     paddingVertical: 0,
-    color: "#023e8a"
+    color: "#1d3557"
   },
   introsubContainer: {
     fontSize: 15,

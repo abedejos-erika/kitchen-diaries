@@ -280,7 +280,7 @@ const styles = StyleSheet.create({
   boxText: {
     fontSize: 15,
     marginLeft: 15,
-    color: "#32708F",
+    color: "#1d3557",
     fontWeight: "bold",
     fontFamily: "poppins-bold",
     textDecorationLine: "underline",
@@ -301,6 +301,6 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: 'bold',
     paddingVertical: 0,
-    color: "#023e8a"
+    color: "#1d3557"
   },
 });
